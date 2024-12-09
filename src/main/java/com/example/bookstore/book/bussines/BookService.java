@@ -21,5 +21,7 @@ public class BookService {
         return bookRepository.findAll();
     }
 
-    public void addNewbook(Book book) {}
+    public void addNewbook(Book book) {
+        System.out.println(book);
+    }
 }
