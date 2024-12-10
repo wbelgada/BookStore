@@ -25,6 +25,14 @@ public class BookController {
 
     @PostMapping
     public void registerBook(@RequestBody Book book) {
+
         bookService.addNewbook(book);
+    }
+
+    @DeleteMapping(path = "{isbn}")
+    public void deleteBook(@PathVariable String isbn) {
+
+        System.out.println(isbn);
+        bookService.deleteBook(isbn);
     }
 }
